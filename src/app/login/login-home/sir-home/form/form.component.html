@@ -1,1 +1,12 @@
-<p>form works!</p>
+<form>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" (keyup)="getEmail($any($event.target).value)" class="form-control" id="exampleInputEmail1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">IdSchool</label>
+        <input type="password" (keyup)="getIdSchool($any($event.target).value)" class="form-control" id="exampleInputPassword1" maxlength="7">
+    </div>
+
+    <button (click)="checkTeacher()" class="btn btn-primary">Submit</button>
+</form>
